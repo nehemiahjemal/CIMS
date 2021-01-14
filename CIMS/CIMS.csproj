@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10C4ADD0-65E9-4E09-A916-9FF9E8A6C4FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CIMS</RootNamespace>
+    <AssemblyName>CIMS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="backForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backForm.Designer.cs">
+      <DependentUpon>backForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChurchDBDataSet.cs">
+      <DependentUpon>ChurchDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChurchDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChurchDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DeathForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeathForm.Designer.cs">
+      <DependentUpon>DeathForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="EducField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EducField.Designer.cs">
+      <DependentUpon>EducField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseForm.Designer.cs">
+      <DependentUpon>ExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseReasonForm.Designer.cs">
+      <DependentUpon>ExpenseReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Family_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Family_Form.Designer.cs">
+      <DependentUpon>Family_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fin_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fin_report.Designer.cs">
+      <DependentUpon>Fin_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeTeamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeTeamForm.Designer.cs">
+      <DependentUpon>HomeTeamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeForm.Designer.cs">
+      <DependentUpon>IncomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeReasonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeReasonForm.Designer.cs">
+      <DependentUpon>IncomeReasonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveForm.Designer.cs">
+      <DependentUpon>LeaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LivingArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivingArea.Designer.cs">
+      <DependentUpon>LivingArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberList.Designer.cs">
+      <DependentUpon>MemberList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberList2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberList2.Designer.cs">
+      <DependentUpon>MemberList2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberList3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberList3.Designer.cs">
+      <DependentUpon>MemberList3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberList4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberList4.Designer.cs">
+      <DependentUpon>MemberList4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberReport.Designer.cs">
+      <DependentUpon>MemberReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="photoViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="photoViewer.Designer.cs">
+      <DependentUpon>photoViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterMember.Designer.cs">
+      <DependentUpon>RegisterMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting.Designer.cs">
+      <DependentUpon>Reporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Field.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service_Field.Designer.cs">
+      <DependentUpon>Service_Field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared.cs" />
+    <Compile Include="UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="backForm.resx">
+      <DependentUpon>backForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeathForm.resx">
+      <DependentUpon>DeathForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EducField.resx">
+      <DependentUpon>EducField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseForm.resx">
+      <DependentUpon>ExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseReasonForm.resx">
+      <DependentUpon>ExpenseReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Family_Form.resx">
+      <DependentUpon>Family_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fin_report.resx">
+      <DependentUpon>Fin_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeTeamForm.resx">
+      <DependentUpon>HomeTeamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeForm.resx">
+      <DependentUpon>IncomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeReasonForm.resx">
+      <DependentUpon>IncomeReasonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveForm.resx">
+      <DependentUpon>LeaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LivingArea.resx">
+      <DependentUpon>LivingArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberList.resx">
+      <DependentUpon>MemberList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberList2.resx">
+      <DependentUpon>MemberList2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberList3.resx">
+      <DependentUpon>MemberList3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberList4.resx">
+      <DependentUpon>MemberList4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberReport.resx">
+      <DependentUpon>MemberReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="photoViewer.resx">
+      <DependentUpon>photoViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterMember.resx">
+      <DependentUpon>RegisterMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting.resx">
+      <DependentUpon>Reporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service_Field.resx">
+      <DependentUpon>Service_Field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ChurchDBDataSet.xsc">
+      <DependentUpon>ChurchDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ChurchDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChurchDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ChurchDBDataSet.xss">
+      <DependentUpon>ChurchDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.XlsIO.WinForms">
+      <Version>18.1.0.53</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repi logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repi logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desert.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teamwork-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-family-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-performance-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-performance-240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-group-man-man-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-report-file-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-file-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-people-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-new-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-user-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-group-man-man-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sav1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-death-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leave1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-go-back-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lens-3114731_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-camera-2027073_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-1824144_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\church.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\church2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-menu-male-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-download-pie-chart-report-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-bar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Church Header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Church Header2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Church Header3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Church Header31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-browse-folder-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-form-30.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
